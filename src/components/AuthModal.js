@@ -18,7 +18,7 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
     const handleSubmit = (e) => {
         e.preventDefault() //dont want the page to refresh when form is submited
         try {
-            if( isSignUp && (password != confirmPassword)){
+            if( isSignUp && (password !== confirmPassword)){
                 setError("Passwords need to match")
             }
             console.log("make a post request to our database")
