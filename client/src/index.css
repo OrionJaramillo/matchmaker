@@ -233,3 +233,119 @@ nav .logo-container .logo{
 
 
 /* ----- Dashboard ----- */
+.dashboard{
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard .swipe-container{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(255, 234, 241);
+}
+
+.swipe {
+  position: absolute;
+}
+
+.dashboard .card-container {
+  width: 400px;
+  height: 650px;
+}
+
+.card {
+  background-color: #fff;
+  width: 400px;
+  height: 650px;
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.card h3 {
+  position: absolute;
+  bottom: 0;
+  margin: 15px;
+  color: #fff;
+}
+
+.dashboard .swipe-info{
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+}
+
+
+/* ----- Chat Container ----- */
+
+.chat-container{
+  background-color: #fff;
+  width: 30%;
+  text-align: left;
+  z-index: 1;
+}
+
+.chat-container-header{
+  background: linear-gradient(45deg, #fe3072, #ff5940);
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-container .option{
+  border: none;
+  background-color: #fff;
+  border-bottom: solid 4px rgb(243,33,33);
+  font-size: 1.5rem;
+  margin: 2px;
+  padding: .75rem;
+}
+
+.chat-container .option:disabled{
+  border-bottom: solid 4px rgba(187,187,187);
+}
+
+.chat-container .log-out-icon,
+.chat-container .profile{
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.img-container {
+  height: 30px;
+  width: 30px;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: .75rem;
+}
+
+.img-container img{
+  width: 100%;
+}
+
+
+/* ----- Chat Display ----- */
+
+.chat-display {
+  padding: 20px;
+  height: 53vh;
+  overflow-y: auto;
+}
+
+.chat-input{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-input textarea{
+  width: 100%;
+}
