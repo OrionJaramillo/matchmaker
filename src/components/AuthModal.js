@@ -1,22 +1,33 @@
 import { useState } from 'react'
 
-const AuthModal = ({ setShowModal }) => {
+const AuthModal = ({ setShowModal, isSignUp }) => {
     const [email, setEmail] = useState(null)
     const [password, setPassword] = useState(null)
     const [confirmPassword, setConfirmPassword] = useState(null)
     const [error, setError] = useState(null)
 
+
+    console.log(email, password, confirmPassword)
+
+    //show form 
     const handleClick = () => {
         setShowModal(false)
     }
 
+    //form submission
     const handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault() //dont want the page to refresh when form is submited
+        try {
+            if( isSignUp && (password != confirmPassword)){
+                setError("Passwords need to match")
+            }
+            console.log("make a post request to our database")
+        } catch (error) {
+            console.log(error)
+        }
     }
 
-    const isSignUp = true;
 
-    console.log(email, password, confirmPassword)
 
     return (
         <div className="auth-modal">
@@ -40,21 +51,20 @@ const AuthModal = ({ setShowModal }) => {
                     required={true}
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <input 
-                    type="password-check" 
+                {isSignUp && <input 
+                    type="password" 
                     id="password-check" 
                     name="password-check" 
                     placeholder="confirm password" 
                     required={true}
                     onChange={(e) => setConfirmPassword(e.target.value)}
-                />
+                />}
                 <input className="secondary-button" type="submit"/>
-                <p>{error}</p>
+                <p className="error">{error}</p>
             </form>
             <hr/>
             <h2>GET THE APP</h2>
             
-            AUTH MODAL
         </div>
     )
 }
