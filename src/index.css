@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;700&family=Roboto+Mono&display=swap');
+
+html, body{
+  margin: 0px;
+  padding: 0px;
+}
+
+*{
+  font-family: 'Readex Pro', sans-serif;
+}
+
+body{
+  text-align: center;
+}
+
+.primary-button{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  background:  linear-gradient(45deg, #fe3072, #ff5940);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+}
+
+.primary-button:hover{
+  background: linear-gradient(260deg, #fe3072, #ff5940);
+  cursor: pointer;
+}
+
+.secondary-button{
+  color: #777;
+  background-color: #fff;
+  font-weight: 500px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  border: solid 2px #777;
+  margin: .5rem;
+}
+
+.secondary-button:hover{
+  color: #222;
+  border: solid 2px #222;
+  cursor: pointer;
+}
+
+
+/* ----- Navbar ----- */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .nav-button{
+  color: #fe3072;
+  background-color: #fff;
+  font-size: 1rem;
+  padding: .75rem 2rem; 
+  margin: 0.75rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+nav .nav-button:hover{
+  cursor: pointer;
+}
+
+nav .nav-button:disabled{
+  background-color: #c9c9c9f7;
+  color: #b42653;
+  cursor: default;
+}
+
+
+nav .logo-container{
+  width: 10rem;
+  margin: 1rem;
+}
+
+nav .logo-container .logo{
+  width: 100%;
+}
+
+
+/* ----- home page ----- */
+.overlay{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: linear-gradient(180deg, rgba(0,0,0,0.65), rgba(0,0,0,0));
+}
+
+
+/* ----- Auth Modal ----- */
+.auth-modal{
+  /* position: absolute; */
+  top: 0rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 20rem;
+  height: 40rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 4rem;
+}
+
+
+.auth-modal .close-icon{
+  border-radius: 50%;
+  float: right;
+}
+
+.auth-modal .close-icon:hover{
+  cursor: pointer;
+}
