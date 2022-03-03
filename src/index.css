@@ -145,4 +145,91 @@ nav .logo-container .logo{
 }
 
 
-/* ----- Auth Modal ----- */
+/* ----- Onboarding ----- */
+
+.onboarding{
+  border-top: solid 2px rgb(190, 190, 190);
+}
+
+.onboarding form{
+  display: flex;
+  justify-content: center;
+
+}
+
+.onboarding form section{
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  width: 35%;
+  text-align: start;
+}
+
+.onboarding form input{
+  padding: 1rem 2rem;
+  margin: .75rem 0rem;
+  font-size: 1rem;
+  border: solid 2px #777;
+  border-radius: 0.75rem;
+}
+
+.onboarding form input::-webkit-outer-spin-button,
+.onboarding form input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.onboarding form label {
+  margin: .75rem 0rem;
+}
+
+.onboarding form .multiple-input-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.onboarding form .multiple-input-container input{
+  margin-right: .75rem;
+}
+
+.onboarding form .multiple-input-container label{
+  padding: .75rem;
+  border: solid 2px #777;
+  border-radius: 1rem;
+  transition: all 0.3s;
+  margin-right: .75rem;
+}
+
+.onboarding form input[type="number"]{
+  width: 10%;
+}
+
+.onboarding form input[type="radio"]{
+  display: none;
+}
+
+.onboarding form input[type="radio"]:checked + label{
+  border: solid 2px #fe3072;
+}
+
+.onboarding form input[type="radio"]:hover + label{
+  border: solid 2px #fe3072;
+  cursor: pointer;
+}
+
+.onboarding form input[type="submit"]:hover{
+  background-color: rgb(228, 228, 228);
+  cursor: pointer;
+}
+
+.onboarding form input[type="submit"]:active{
+  background-color: #fe3072;
+}
+
+.onboarding form img{
+  width: 100%;
+}
+
+
+
+/* ----- Dashboard ----- */
